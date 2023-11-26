@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+/* 共通部分 
+------------------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color:   rgb(240, 67, 14);
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* 見出し */
+.page-title {
+  font-size: 5rem;
+  font-family: "Philosopher", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* ボタン */
+.button {
+  font-size: 1.375rem;
+  background: rgb(240, 67, 14);
+  color: #fff;
+  border-radius: 30px;
+  padding: 15px 32px;
+}
+.button:hover {
+  background: rgb(164, 47, 11);
+}
+
+/* HEADER
+------------------------------- */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 250px;
+  margin-top: 14px;
+}
+.main-nav {
+  display: flex;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 36px;
+}
+.main-nav a {
+  color: rgb(240, 67, 14);
+}
+.main-nav a:hover {
+  color: #0bd;
+}
+/* ここまでも同じ　*/
+
+
+
+/* HOME
+------------------------------- */
+#home {
+  background-image: url(../images/main-bg.jpg);
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: none;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 3.5%;
+}
+
+
+.home-content p {
+  font-size: 1.3rem;
+  background: rgb(146, 166, 74);
+  color: #fff;
+  border-radius: 5px;
+  margin: 260px 50px 20px;
+}
+
+
+/* menu   
+  
+------------------------------*/
+#menu {
+  background-image: url(../images/menu-bg.jpg);
+  min-height: 100vh;
+}
+
+.menu-nav {
+ 
+  font-size: 1.1rem;
+  text-transform: none;
+  color:rgb(18, 50, 24);
+  list-style: none;
+}
+
+
+
+.menu-text {
+  font-size: 1.3rem;
+  color:rgb(24, 57, 37);
+  
+}
+
+.grid2 {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+margin-top: 10px;
+margin-bottom: 50px;
+  }
+
+
+  hr {
+    margin-top: -20px;
+    padding: 20px 0;
+    border: none;
+  }
+
+  .hr1 {
+    border-top: 3px solid  rgb(240, 67, 14); /* aka */
+    width: 100%;
+  }
+
+/* news 
+------------------------------- */
+
+#news {
+  background-image: url(../images/news-bg.jpeg);
+  min-height: 100vh;
+}
+.news-content {
+  max-width: 700px;
+  margin-top: 3%;
+}
+.news-content .page-title {
+  text-align: center;
+ 
+}
+.news-content p {
+  text-align: center;
+  font-size: 1rem;
+  background: rgb(146, 166, 74);
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px 55px 20px;
+}
+
+.grid {
+display: grid;
+gap: 26px;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+margin-top: 10px;
+margin-bottom: 50px;
+}
+.item p{
+  font-size: 1rem;
+  color: #472d22;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #472d22;
+  margin-top: 30px;
+}
+
+/* フッター
+------------------------------- */
+footer {
+  background:rgba(156, 49, 49, 0.5);
+  text-align: center;
+  padding: 26px 0;
+}
+footer p {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+
+
+
+@media (max-width: 760px) {
+
+  .home-content {
+    text-align: center;
+  
+  }
+  
+  .home-content p {
+    font-size: 1.15rem;
+    background: rgb(146, 166, 74);
+    color: #fff;
+    border-radius: 5px;
+    margin: 160px 20px 30px;
+  }
+  
+  /* ボタン */
+.button {
+  font-size: 1rem;
+  background: rgb(240, 67, 14);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+.button:hover {
+  background: rgb(164, 47, 11);
+}
+}
+
+
+@media (max-width: 600px) {
+  
+  h2 {
+    color: rgb(240, 67, 14);
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  /* HEADER */
+  .main-nav {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .main-nav li {
+    margin: 0 20px;
+  }
+
+  /* HOME */
+  .home-content {
+    margin-top: 20%;
+  }
+  /* ↓ この部分追加 ↓ */
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* ↑ ここまで追加 ↑ */
+
+
+  .home-content {
+    text-align: center;
+  
+  }
+  
+  .home-content p {
+    font-size: 1rem;
+    background: rgb(146, 166, 74);
+    color: #fff;
+    border-radius: 5px;
+    margin: 160px 20px 30px;
+  }
+  
+  /* ボタン */
+.button {
+  font-size: 1rem;
+  background: rgb(240, 67, 14);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+.button:hover {
+  background: rgb(164, 47, 11);
+}
+
+
+  }
+
+  /* news */
+  .news-content {
+    margin-top: 20%;
+}
